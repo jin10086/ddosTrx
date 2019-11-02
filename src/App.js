@@ -89,7 +89,7 @@ class App extends Component {
 
 
                     <p></p>
-                    {button}
+                    {/* {button} */}
 
                 
                     <button onClick={this.gettoken}>薅</button>
