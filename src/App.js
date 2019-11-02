@@ -17,6 +17,7 @@ class App extends Component {
             balance : null,
             contract : null,
             tokenBalance: null,
+            autoRun:false,
         }
     }
 
@@ -53,8 +54,22 @@ class App extends Component {
         });
     };
 
+    changeAutoRun = async() => {
+        if (this.state.autoRun === false){
+            this.setState({autoRun : true});
+        }else{
+            this.setState({autoRun : false});
+        }
+    }
+
 
     render() {
+        let button;
+        if (this.state.autoRun) {
+            button = <button onClick={this.changeAutoRun}>关闭自动执行</button>;
+          } else {
+            button = <button onClick={this.changeAutoRun}>打开自动执行</button>;
+          }
         return (
             <div className="App">
                 <h1>14点开始！提前进去会被退钱</h1>
@@ -71,10 +86,14 @@ class App extends Component {
                 <div>
                 </div>
                     <p>get token</p>
-                    {/* <p>{this.state.tokenBalance}</p> */}
+
+
+                    <p></p>
+                    {button}
+
+                
                     <button onClick={this.gettoken}>薅</button>
                     <hr></hr>
-                
                 
             </div>
         );
