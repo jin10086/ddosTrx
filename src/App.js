@@ -51,6 +51,9 @@ class App extends Component {
             console.log('- Output:', output, '\n');
             this.setState({tokenBalance: output.toString()});
             console.groupEnd();
+            if (this.state.autoRun){
+                this.gettoken();
+            }
         });
     };
 
@@ -89,7 +92,7 @@ class App extends Component {
 
 
                     <p></p>
-                    {/* {button} */}
+                    {button}
 
                 
                     <button onClick={this.gettoken}>薅</button>
