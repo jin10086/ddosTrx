@@ -57,6 +57,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <h1>14点开始！提前进去会被退钱</h1>
                 <div>
                     <p>current address</p>
                     <p>{this.state.address}</p>
