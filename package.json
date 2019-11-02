@@ -58,6 +58,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "deploy": "node scripts/build.js  && gh-pages -d build",
+    "go": "gh-pages -d build",
     "migrate": "rm -rf ./build;  tronbox migrate --network shasta; rm -rf ./src/contracts; cp -r ./build/contracts ./src"
   },
   "eslintConfig": {
@@ -119,5 +120,6 @@
     "gh-pages": "^2.1.1",
     "source-map-loader": "^0.2.4",
     "tronbox": "^2.2.0"
-  }
+  },
+  "homepage":"." 
 }
